@@ -29,7 +29,7 @@ class _AddNotePageState extends State<AddNotePage> {
       backgroundColor: Color(0xFFF3F3F3), // Light gray background
       appBar: AppBar(
         title: Text(
-          'Add Note',
+          widget.note == null ? 'Add Note' : 'Edit Note', // Dynamic title
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -37,10 +37,10 @@ class _AddNotePageState extends State<AddNotePage> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.deepPurple, // Consistent navbar color
+        backgroundColor: Colors.deepPurple, // Navbar color
         elevation: 5,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white), // White back arrow
+          icon: Icon(Icons.arrow_back, color: Colors.white), // Back button
           onPressed: () {
             Navigator.pop(context);
           },
