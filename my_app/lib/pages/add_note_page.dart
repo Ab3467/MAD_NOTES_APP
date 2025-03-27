@@ -5,6 +5,7 @@ class AddNotePage extends StatefulWidget {
   const AddNotePage({super.key, this.note});
 
   @override
+  // ignore: library_private_types_in_public_api
   _AddNotePageState createState() => _AddNotePageState();
 }
 
